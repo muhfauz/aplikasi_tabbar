@@ -5,6 +5,20 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  List<Tab> myTab = [
+    Tab(
+      icon: Icon(Icons.ac_unit),
+      text: "Hai",
+    ),
+    Tab(
+      icon: Icon(Icons.back_hand),
+      text: "Kamu",
+    ),
+    Tab(
+      icon: Icon(Icons.receipt),
+      text: "Aku",
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,20 +29,7 @@ class MyApp extends StatelessWidget {
             preferredSize: Size.fromHeight(20),
             child: DefaultTabController(
               length: 3,
-              child: TabBar(tabs: [
-                Tab(
-                  icon: Icon(Icons.ac_unit),
-                  text: "Hai",
-                ),
-                Tab(
-                  icon: Icon(Icons.back_hand),
-                  text: "Kamu",
-                ),
-                Tab(
-                  icon: Icon(Icons.receipt),
-                  text: "Aku",
-                ),
-              ]),
+              child: TabBar(tabs: myTab),
             ),
           ),
         ),
